@@ -1,42 +1,23 @@
-#
-# Be sure to run `pod lib lint D2CloudKitManager.podspec' to ensure this is a
-# valid spec before submitting.
-#
-# Any lines starting with a # are optional, but their use is encouraged
-# To learn more about a Podspec see http://guides.cocoapods.org/syntax/podspec.html
-#
-
 Pod::Spec.new do |s|
   s.name             = 'D2CloudKitManager'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of D2CloudKitManager.'
-
-# This description is used to generate tags and improve search results.
-#   * Think: What does it do? Why did you write it? What is the focus?
-#   * Try to keep it short, snappy and to the point.
-#   * Write the description between the DESC delimiters below.
-#   * Finally, don't worry about the indent, CocoaPods strips it!
+  s.summary          = 'A wrapper on top of CloudKit to make your life a little easier when integrated with the greatest cloud system in the world.'
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+This pop is essentially a wrapper to use on top of CloudKit for your service call needs. If you are familiar with CloudKit, using this should be straight forward.
                        DESC
 
-  s.homepage         = 'https://github.com/<GITHUB_USERNAME>/D2CloudKitManager'
+  s.homepage         = 'https://github.com/2020Deception/D2CloudKitManager'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'Brian Bowman' => 'brian.bowman@carrotcreative.com' }
-  s.source           = { :git => 'https://github.com/<GITHUB_USERNAME>/D2CloudKitManager.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+  s.author           = { '2020Deception' => '2020Deception@gmail.com' }
+  s.source           = { :git => 'https://github.com/2020Deception/D2CloudKitManager.git', :tag => s.version.to_s }
+  s.social_media_url = 'https://twitter.com/Decepticon2020'
 
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '10.0'
 
   s.source_files = 'D2CloudKitManager/Classes/**/*'
-  
-  # s.resource_bundles = {
-  #   'D2CloudKitManager' => ['D2CloudKitManager/Assets/*.png']
-  # }
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  s.public_header_files = 'D2CloudKitManager/Classes/**/*.h'
+  s.frameworks = 'UIKit', 'Foundation', 'CloudKit'
 end

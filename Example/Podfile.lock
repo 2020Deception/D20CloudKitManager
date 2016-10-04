@@ -1,0 +1,16 @@
+PODS:
+  - D2CloudKitManager (0.1.0)
+
+DEPENDENCIES:
+  - D2CloudKitManager (from `../`)
+
+EXTERNAL SOURCES:
+  D2CloudKitManager:
+    :path: ../
+
+SPEC CHECKSUMS:
+  D2CloudKitManager: 7740a4d6f278666f8cc116a87c8bef325ecbff1f
+
+PODFILE CHECKSUM: abfb55bd72b4e3b32ef57c5c0785e7f65019c851
+
+COCOAPODS: 1.0.1

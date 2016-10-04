@@ -8,6 +8,8 @@
 
 #import "D20ViewController.h"
 
+#import "D20CloudKitManager.h"
+
 @interface D20ViewController ()
 
 @end
@@ -17,7 +19,18 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    
+    [[D20CloudKitManager sharedInstance] requestDiscoverabilityPermission:^(BOOL discoverable, NSError * _Nullable error) {
+        if (discoverable) {
+            [[D20CloudKitManager sharedInstance] discoverUserInfoWithRecordId:nil completionHandler:^(CKUserIdentity * _Nullable user, NSError * _Nullable error) {
+                if (error) {
+                    [[D20CloudKitManager sharedInstance] handleError:error serverFailureBlock:nil retryCallBlock:nil retryUploadBlock:nil partialFailureBlock:nil errorDisplayBlock:nil];
+                }
+                
+                NSLog(@"%@ %@ %@", user.nameComponents.givenName, user.nameComponents.familyName, user.lookupInfo.emailAddress);
+            }];
+        }
+    }];
 }
 
 - (void)didReceiveMemoryWarning

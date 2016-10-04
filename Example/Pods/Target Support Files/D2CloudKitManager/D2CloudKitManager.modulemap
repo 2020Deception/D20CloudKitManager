@@ -1,0 +1,6 @@
+framework module D2CloudKitManager {
+  umbrella header "D2CloudKitManager-umbrella.h"
+
+  export *
+  module * { export * }
+}
