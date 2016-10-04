@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'D2CloudKitManager_Example' do
+  pod 'D2CloudKitManager', :path => '../'
+
+  target 'D2CloudKitManager_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
